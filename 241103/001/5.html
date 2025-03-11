@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset="UTF-8">
+ <title>超链接标签</title>
+ </head>
+ <body>
+ 		<!-- 
+    如果a标签不写href属性，就是一个纯文本
+    如果写属性，href属性代表访问路径，可以是相对路径和绝对路径。
+    访问的资源如果是页面可直接打开，如果访问的是文件，能浏览则直接浏览，不能浏览的就会下载
+    图片超链接：a标签的内容是一个图片
+ 		 -->
+     <a>纯文本超链接，不加属性，和正文内容一样</a><br>
+     
+     <!-- 相对路径：超链接指向当前项目的其它页面，也有三种情况，这里仅以第一种情况为例进行演示 -->
+     <a href="image.html">图片标签页面</a><br>
+     
+     <!-- 绝对路径1：访问指定页面，火狐浏览器路径前面要加：file:///，否则加载打不开链接-->
+     <a href="D:\Software_Development\Eclipse_Code\webTest\
+              WebContent\unit01\first.html">文本标签页面</a><br>
+     <!-- 绝对路径2：访问指定网址，注意前面要加http -->
+     <a href="http://www.baidu.com">百度</a><br>
+     
+     <!-- 
+         以上href属性都是网页，如果不是网页有两种情况：
+         1.如果浏览器能打开（比如图片），那么就打开
+         2.如果浏览器不能打开（比如压缩包），那么就下载这个文件
+     -->
+     <a href="1.jpg">访问图片</a><br>
+     <a href="压缩包.zip">下载压缩包</a><br>
+     
+     <!-- 
+         target属性：指定打开页面方式 
+         1.指定页面跳转（默认）
+         2.在新页面中打开（target属性设置为“_blank”）
+     -->
+     <a href="image.html" target="_blank">访问图片标签</a><br>
+     
+     <!-- 
+         图片超链接 
+         a标签中的内容是一个图片，那么这个图片就会成为一个链接
+     -->
+     <a href="image.html" target="_blank">
+         <img alt="图片加载失败" src="1.jpg" title="点击访问图片标签页面">
+     </a><br>
+     
+ </body>
+ </html>

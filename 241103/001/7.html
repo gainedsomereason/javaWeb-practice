@@ -1,0 +1,131 @@
+ <!DOCTYPE html>
+ <head>
+ <meta charset="UTF-8">
+ <title>表单标签</title>
+ </head>
+ <body>
+ 	<!-- 
+    表单是指一个可以由用户编辑或输入内容的范围，比如用户登录或者注册到的页面，都包含表单；
+    表单标签是形成表单中出现标签的统称
+作用：获取用户输入的各种信息，然后将信息提交给服务器。
+主要内容：学习表单主要学习的就是表单里面有哪些控件（文本框、密码框、提交按钮、单选、多选、下拉选、日期选择器、文件选择器等  -->
+     <!-- form标签中的action属性：将表单中信息提交到的路径（网页、网址等等） -->
+     <form action="img.html">
+         <!-- 
+             文本框
+             type=text，默认，可不写
+             name：名称
+             value：默认值，文本框中的值
+             placeholder：占位文本，value属性为空时，文本框中提示的文字，输入内容后提示文字消失
+         -->
+         文本框：用户名：<input type="text" value=""><br>
+         文本框：用户名：<input type="text" name="username" value="" placeholder="请输入您的用户名"><br>
+         文本框：用户名：<input type="text" name="username" value="123" ><br>
+         
+         <!-- 
+             密码框
+             type=password
+             value：填入数据后会变为点·
+          -->
+         密码框：密码：<input type="password" name="pwd" placeholder="请输入密码"><br>
+         密码框：密码：<input type="password" name="pwd" placeholder="请输入密码" value="123456"><br>
+     
+         <!-- 
+             提交按钮 
+             type=submit
+             value：按钮上显示的文字，点击该文字跳转到指定页面（上面action定义的路径）
+         -->
+         提交按钮：<input type="submit" value="提交"><br>
+         
+         <!-- 
+             重置按钮 
+             type=reset
+             value：按钮上显示的文字，点击该文字重置表单数据，相当于初始化
+         -->
+         重置按钮：<input type="reset" value="重置"><br>
+     
+         <!-- 
+             普通按钮 
+             type=button
+             value：按钮上显示的文字，点击后没有效果  
+         -->
+         普通按钮：<input type="button" value="按钮"><br>
+     
+         <!-- 
+             单选按钮/单选框 
+             type=radio
+             value
+             name：存在互斥效果时name属性必须相同，使后面的选项不能同时勾选
+             显示文字写在外面
+         -->
+         单选按钮/单选框：性别：
+         <input type="radio" value="m" name="gender">男
+         <input type="radio" value="f" name="gender">女
+         <br>
+     
+         <!-- 
+             label使用：在表单控件上编写id和id的值，编写label标签，
+             然后编写for属性对应id的值，这样点击对应的控件就会获得焦点
+             效果是：点击控件上的文字，相应的框被选中，开始闪动起来
+         -->
+         label使用1：性别：
+         <input type="radio" value="m" name="gender" id="mm"><label for="mm">男</label>
+         <input type="radio" value="f" name="gender" id="ff"><label for="ff">女</label>
+         <br>
+         label使用2：文本框：<label for="1">用户名：</label><input type="text" name="" value="" id="1"><br>
+         
+         <!-- 
+             checked="checked" 默认选中某个选项 
+         -->
+         checked使用：性别：
+         <input type="radio" value="m" name="gender" id="mm" checked="checked"><label for="mm">男</label>
+         <input type="radio" value="f" name="gender" id="ff"><label for="ff">女</label>
+　　　　　<br> 
+     
+<!--  
+　　多选框/复选框 
+　　type=checkbox 
+　　name 
+　　value  
+--> 
+多选框/复选框： 
+爱好： 
+<input type="checkbox" name="hobby" value="1" checked="checked">吃饭 
+<input type="checkbox" name="hobby" value="2">睡觉 
+<input type="checkbox" name="hobby" value="3">打豆豆<br> 
+     
+<!--  
+　　日期 
+　　type=date  
+　　name 
+--> 
+生日：<input type="date" name="birthday"><br> 
+     
+<!--  
+　　文件选择器  
+　　type=file 
+　　name 
+--> 
+文件选择器：<input type="file" name="data"><br> 
+     
+<!--  
+　　下拉列表  
+　　<select name=""> 
+　　　　<option value="">选项1</option> 
+　　　　<option value="">选项2</option> 
+　　　　<option value="">选项3</option> 
+　　　　... 
+　　</select> 
+　　默认选择第一个选项    
+--> 
+下拉列表：籍贯： 
+<select name="city"> 
+　　<option value="hb">河北</option> 
+　　<option value="hn">河南</option> 
+　　<option value="sd">山东</option> 
+　　<option value="sx">山西</option> 
+</select> 
+</form> 
+</body> 
+</html> 
+​
